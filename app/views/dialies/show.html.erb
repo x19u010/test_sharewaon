@@ -1,0 +1,35 @@
+<p style="color: green"><%= notice %></p>
+
+
+
+<p>
+  <strong>ID:</strong>
+  <%= @dialy.id %>
+</p>
+
+<p>
+  <strong>タイトル:</strong>
+  <%= @dialy.title %>
+</p>
+
+<p>
+  <strong>本文:</strong>
+  <%= @dialy.body %>
+</p>
+
+<p>
+  <strong>登録日時:</strong>
+  <%= @dialy.created_at %>
+</p>
+
+<p>
+  <strong>更新日時:</strong>
+  <%= @dialy.updated_at %>
+</p>
+
+<div>
+  <%= link_to "編集", edit_dialy_path(@dialy) %> |
+  <%= link_to "一覧に戻る", dialies_path %>
+
+  <%= button_to "削除", @dialy, method: :delete %>
+</div>

@@ -1,0 +1,125 @@
+
+<div id="app">
+    <h1 :class="color">Tone.jsサンプルデモaaa</h1>
+    <input type="text" v-model="color">
+  
+  
+  <draggable tag="ul">
+      
+      <br>
+    <button  v-on:click="c4" >{{items[0].name}}</button>
+    <button  v-on:click="d4" >{{items[1].name}}</button>
+    <button  v-on:click="e4" >{{items[2].name}}</button>
+    <button  v-on:click="f4" >{{items[3].name}}</button>
+    <button  v-on:click="g4" >{{items[4].name}}</button>
+    <button  v-on:click="a4" >{{items[5].name}}</button>
+    <button  v-on:click="b4" >{{items[6].name}}</button>
+    <button  v-on:click="c5" >{{items[7].name}}</button>
+    <button v-on:click="ts">test</button>
+  </draggable>
+  
+  
+
+    
+    
+</div>
+
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            n:0,
+            color: '',
+            chords: ['','',''],
+            items:[
+                {no:1, name:'ド', categoryNo:'1'},
+                {no:2, name:'レ', categoryNo:'2'},
+                {no:3, name:'ミ', categoryNo:'3'},
+                {no:4, name:'ファ', categoryNo:'4'},
+                {no:5, name:'ソ', categoryNo:'5'},
+                {no:6, name:'ラ', categoryNo:'6'},
+                {no:7, name:'シ', categoryNo:'7'},
+                {no:8, name:'ド', categoryNo:'8'}
+                ]
+            
+        },
+        
+        methods:{
+            c4:function(){
+                
+                // 音源の「Tone.Synth()」を作り、マスター出力に接続
+               var synth = new Tone.Synth().toMaster();
+            　　// 中央の「ド(C4)」を4分音符で発音する
+               synth.triggerAttackRelease( 'C4', '8n' );
+               this.n+=1;
+                },
+                
+            d4:function(){
+                 // 音源の「Tone.Synth()」を作り、マスター出力に接続
+               var synth = new Tone.Synth().toMaster();
+            　　// 中央の「ド(C4)」を4分音符で発音する
+               synth.triggerAttackRelease( 'D4', '8n' );
+            },
+            
+            e4:function(){
+                 // 音源の「Tone.Synth()」を作り、マスター出力に接続
+               var synth = new Tone.Synth().toMaster();
+            　　// 中央の「ド(C4)」を4分音符で発音する
+               synth.triggerAttackRelease( 'E4', '8n' );
+            },
+            
+            f4:function(){
+                 // 音源の「Tone.Synth()」を作り、マスター出力に接続
+               var synth = new Tone.Synth().toMaster();
+            　　// 中央の「ド(C4)」を4分音符で発音する
+               synth.triggerAttackRelease( 'F4', '8n' );
+            },
+            
+            g4:function(){
+                 // 音源の「Tone.Synth()」を作り、マスター出力に接続
+               var synth = new Tone.Synth().toMaster();
+            　　// 中央の「ド(C4)」を4分音符で発音する
+               synth.triggerAttackRelease( 'G4', '8n' );
+            },
+            
+            a4:function(){
+                 // 音源の「Tone.Synth()」を作り、マスター出力に接続
+               var synth = new Tone.Synth().toMaster();
+            　　// 中央の「ド(C4)」を4分音符で発音する
+               synth.triggerAttackRelease( 'A4', '8n' );
+            },
+            
+            b4:function(){
+                 // 音源の「Tone.Synth()」を作り、マスター出力に接続
+               var synth = new Tone.Synth().toMaster();
+            　　// 中央の「ド(C4)」を4分音符で発音する
+               synth.triggerAttackRelease( 'B4', '8n' );
+            },
+            
+            c5:function(){
+                 // 音源の「Tone.Synth()」を作り、マスター出力に接続
+               var synth = new Tone.Synth().toMaster();
+            　　// 中央の「ド(C4)」を4分音符で発音する
+               synth.triggerAttackRelease( 'C5', '8n' );
+            },
+            
+            ts:function(){
+                // 音源の「Tone.Synth()」を作り、マスター出力に接続
+               var synth = new Tone.Synth().toMaster();
+            　　// 中央の「ド(C4)」を4分音符で発音する
+               synth.triggerAttackRelease( 'C4', '8n' );
+            //   var chord = Chord.notes("C4");
+            //   this.chords.splice(2, 1, "yeah!");
+            
+            
+            }
+        
+            
+            
+            
+            }
+            
+         })
+         
+         const draggable = window['vuedraggable'];
+</script>

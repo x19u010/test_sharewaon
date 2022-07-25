@@ -1,0 +1,43 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>日記一覧画面</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>タイトル</th>
+      <th>登録日時</th>
+      <th>更新日時</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @dialies.each do |diary| %>
+  <tr>
+    <td><%= diary.id%></td>
+    <td><%= link_to diary.title, diary%></td>
+    <td><%= diary.created_at %></td>
+    <td><%= diary.updated_at %></td>
+  </tr>
+  <% end %>
+  </tbody>
+  
+  
+  
+</table>
+
+<% @hoges.each do |hoges| %>
+  <p><%= hoges.id %></p>
+  <p><%= hoges.name %></p>
+  <% end %>
+  
+  <% @users.each do |users| %>
+  <p><%= users.id %></p>
+  <p><%= users.name %></p>
+  <% end %>
+
+
+<br>
+
+
+<%= link_to "日記を新規作成", new_dialy_path %>
