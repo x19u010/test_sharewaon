@@ -5,6 +5,8 @@ services:
     container_name: rails_todo_db
     # イメージの指定
     image: postgres:14.2-alpine
+    #PID1問題を解決
+    init: true
     # データの永続化（ホスト側のtmp/dbディレクトリにマウントする）
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
@@ -14,6 +16,8 @@ services:
   web:
     # コンテナ名の指定
     container_name: rails_todo_web
+    #PID1問題を解決
+    init: true
     # Dockerfile のあるディレクトリのパスを指定（imageかbuildを必ず指定する必要がある）
     build: .
     # デフォルトのコマンド指定（Rails特有の問題解消とRails立ち上げを指定している）
