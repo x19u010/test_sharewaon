@@ -28,6 +28,8 @@ services:
     # ポートの指定（外部からのアクセス時のポート：Dockerコンテナからアクセス時のポート）
     ports:
       - "3000:3000"
+
+    stdin_open: true
     # 依存関係の指定（dbが起動した後に、webが起動するようになる）
     depends_on:
       - db

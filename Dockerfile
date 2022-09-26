@@ -4,9 +4,9 @@ FROM ruby:3.0.0
 # インストール可能なパッケージの一覧の更新
 RUN apt-get update -qq
 # パッケージのインストール（nodejs、postgresql-client、npmを指定）
-RUN apt-get install -y nodejs postgresql-client npm
-RUN rm -rf /var/lib/apt/lists/*
-RUN npm install --global yarn
+#RUN yum install -y nodejs postgresql-client npm
+#RUN rm -rf /var/lib/apt/lists/*
+#RUN npm install --global yarn
 
 # 作業ディレクトリの指定
 WORKDIR /myapp
@@ -18,3 +18,5 @@ RUN bundle install
 #RUN chmod +x /usr/bin/entrypoint.sh
 #ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
+
+CMD ["bash"]
