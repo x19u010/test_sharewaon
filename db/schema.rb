@@ -23,11 +23,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_07_075044) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "diaries", charset: "utf8mb4", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "hoges", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
