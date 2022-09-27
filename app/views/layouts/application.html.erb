@@ -17,10 +17,40 @@
   </head>
 
   <body>
-    <header>ヘッダー</header>
+    <header class="site-header">  <div class="wrapper site-header__wrapper">
+        <div class="site-header__start">
+          <a href="tenple.html" class="brand"><img src="IMG/logo-removebg-preview.png"></a>
+        </div>
+        <div class="site-header__middle">
+          <nav class="nav">
+            <ul class="nav__wrapper">
+              <li class="nav__item"><a href="#">自動作曲機能</a></li>
+              <li class="nav__item"><a href="#">作曲支援機能</a></li>
+              <li class="nav__item"><a href="#">コード進行掲示板</a></li>
+              <li class="nav__item"><a href="#">作曲掲示板</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="site-header__end">
+          
+          <a class="button" href="login.html">ログイン/新規登録</a>
+        </div>
+      </div></header>
     <div>
       <%= yield %>
     </div>
-    <footer>フッター</footer>
+    <footer class="footer">
+      <div class="logo">
+        <a href="https://twitter.com/?lang=ja"><img src="IMG/2021 Twitter logo - blue.png" alt="Twitter" width="50" height="50"></a>
+        <a href="mailto:ここにアドレス"><img src="IMG/メールフリーアイコン 5.png" alt="mail" width="50" height="50"></a>
+      </div>
+
+      <div class="share">
+        SHAREWAON<br>
+        
+        <a href="">利用規約</a><br>
+        ©2022 Saundy
+      </div>
+    </footer>
   </body>
 </html>
