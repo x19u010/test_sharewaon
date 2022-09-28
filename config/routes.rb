@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get '/users', to: 'users#index'
   get '/users/new'
   get '/tone', to: 'tone#index'
+  get 'top', to:'tops#top'
 end
