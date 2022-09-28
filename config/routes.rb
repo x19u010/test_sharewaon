@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  
   resources :dialies
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
   get '/users', to: 'users#index'
   get '/users/new'
   get '/tone', to: 'tone#index'
-  get 'top', to:'tops#top'
+  root to: 'tops#top'
   get 'composition', to:'compositions#index'
   get 'result', to:'results#index'
   get 'support', to:'supports#index'

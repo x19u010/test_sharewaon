@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
@@ -17,31 +17,26 @@
   </head>
 
   <body>
-    <header class="site-header">  <div class="wrapper site-header__wrapper">
-        <div class="site-header__start">
-          <a href="tenple.html" class="brand"><img src="IMG/logo-removebg-preview.png"></a>
-          <%= link_to 'top', top_path %>
-        </div>
-        <div class="site-header__middle">
-          <nav class="nav">
-            <ul class="nav__wrapper">
-              
-              <li class="nav__item"><%= link_to '自動作曲機能', composition_path %></li>
-              <li class="nav__item"><%= link_to '作曲支援機能', support_path %></li>
-              <li class="nav__item"><%= link_to 'コード進行掲示板(まだ)', top_path %></li>
-              <li class="nav__item"><%= link_to '作曲掲示板(まだ)', top_path %></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="site-header__end">
-          <p>
-            <%= link_to 'ログイン/新規登録', login_path %>
-          </p>
-        </div>
-      </div></header>
+    
+      <header>
+        <div><%= link_to root_path do %><%= image_tag '/logo.png' ,id:"logo"%><% end %></div>
+        <div><%= link_to "トップ", root_path, class: "text-white" %></div>
+        <div><%= link_to "自動作曲機能", composition_path, class: "text-white" %></div>
+        <div><%= link_to "作曲支援機能", support_path, class: "text-white" %></div>
+        <% if user_signed_in? %> 
+          <div><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "text-white" %></div> 
+          <% else %>
+          <div><%= link_to "ログイン", new_user_session_path, method: :delete, class: "text-white" %></div> 
+        <% end %>  
+      </header>
+    
+
+
     <div>
       <%= yield %>
     </div>
+
+
     <footer class="footer">
       <div class="logo">
         <a href="https://twitter.com/?lang=ja"><img src="IMG/2021 Twitter logo - blue.png" alt="Twitter" width="50" height="50"></a>

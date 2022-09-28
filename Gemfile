@@ -73,3 +73,7 @@ end
 
 #ログイン機能
 gem 'devise'
+
+#デザイン系
+gem 'bootstrap', '~> 4.5'
+gem 'jquery-rails'

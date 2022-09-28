@@ -7,6 +7,7 @@ RUN apt-get update -qq \
 && apt-get install -y nodejs postgresql-client npm \
 && rm -rf /var/lib/apt/lists/* \
 && npm install --global yarn
+RUN yarn add @rails/ujs
  
 # 作業ディレクトリの指定
 WORKDIR /myapp
