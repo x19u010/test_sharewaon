@@ -20,20 +20,23 @@
     <header class="site-header">  <div class="wrapper site-header__wrapper">
         <div class="site-header__start">
           <a href="tenple.html" class="brand"><img src="IMG/logo-removebg-preview.png"></a>
+          <%= link_to 'top', top_path %>
         </div>
         <div class="site-header__middle">
           <nav class="nav">
             <ul class="nav__wrapper">
-              <li class="nav__item"><a href="#">自動作曲機能</a></li>
-              <li class="nav__item"><a href="#">作曲支援機能</a></li>
-              <li class="nav__item"><a href="#">コード進行掲示板</a></li>
-              <li class="nav__item"><a href="#">作曲掲示板</a></li>
+              
+              <li class="nav__item"><%= link_to '自動作曲機能', composition_path %></li>
+              <li class="nav__item"><%= link_to '作曲支援機能', support_path %></li>
+              <li class="nav__item"><%= link_to 'コード進行掲示板(まだ)', top_path %></li>
+              <li class="nav__item"><%= link_to '作曲掲示板(まだ)', top_path %></li>
             </ul>
           </nav>
         </div>
         <div class="site-header__end">
-          
-          <a class="button" href="login.html">ログイン/新規登録</a>
+          <p>
+            <%= link_to 'ログイン/新規登録', login_path %>
+          </p>
         </div>
       </div></header>
     <div>
